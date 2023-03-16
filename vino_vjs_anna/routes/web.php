@@ -80,3 +80,7 @@ Route::get('/lang/{locale}', [LocalizationController::class, 'index'])->name('la
 
 Route::get('/catalogue/search', [CatalogueController::class, 'search'])->name('catalogue.search');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
